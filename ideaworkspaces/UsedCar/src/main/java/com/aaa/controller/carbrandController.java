@@ -20,6 +20,9 @@ public class carbrandController {
     @Resource
     carbrandService cservice;
 
+    /*
+    * 查询车辆品牌
+    * */
     @RequestMapping("/find_carbrand")
     public String find_carbrand(Model model) {
         List<carbrand> list = cservice.find_carbrand();
@@ -29,6 +32,9 @@ public class carbrandController {
         return "/jsp/carbrand";
     }
 
+    /*
+    * 图片上传
+    * */
     @RequestMapping("/upload_carbrandicon")
     @ResponseBody
     public String upload_carbrandicon(MultipartFile[] picfile) throws IOException {
@@ -48,6 +54,10 @@ public class carbrandController {
         }
         return picValue;
     }
+
+    /*
+    * 添加车辆品牌
+    * */
     @RequestMapping("/insert_carbrand")
     public void insert_carbrand(String carbrandname,String carbrandlogoaram,String imgurl){
         int id=(int)((Math.random()*9+1)*100000);
@@ -58,6 +68,10 @@ public class carbrandController {
         c.setCarbrandlogogram(carbrandlogoaram);
         int count=cservice.insert_carbrand(c);
     }
+
+    /*
+    * 根据编号查询车辆品牌
+    * */
     @RequestMapping("/find_carbrandid")
     public String find_carbrandid(int carbrandid,Model model){
         List<carbrand> list=cservice.find_carbrandid(carbrandid);
@@ -65,6 +79,9 @@ public class carbrandController {
         return "/jsp/updata_carbrand";
     }
 
+    /*
+    * 修改车辆品牌
+    * */
     @RequestMapping("/update_carbrand")
     public void update_carbrand(int carbrandid,String carbrandname,String carbrandlogoaram,String imgurl){
         carbrand c=new carbrand();

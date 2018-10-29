@@ -19,35 +19,33 @@
 </head>
 <body>
 <div class="x-nav">
-    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="/carbrand/find_carbrand" title="刷新" id="flush">
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新" id="flush">
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>
 </div>
 <div class="x-body">
     <div class="layui-row">
     </div>
     <xblock>
-        <button class="layui-btn" onclick="x_admin_show('添加车辆品牌','jsp/addcarbrand.jsp')"><i class="layui-icon"></i>添加</button>
+        <button class="layui-btn" onclick="x_admin_show('添加车系','carseries/find_carbrandname')"><i class="layui-icon"></i>添加</button>
         <span class="x-right" style="line-height:40px">共有数据：${headcount} 条</span>
     </xblock>
     <table class="layui-table">
         <thead>
         <tr>
             <th>编号</th>
-            <th>品牌名</th>
-            <th>品牌标志</th>
-            <th>品牌名简写</th>
+            <th>车系名称</th>
+            <th>所属品牌</th>
             <th>操作</th>
         </thead>
         <tbody>
 
-        <c:forEach items="${carbrand}" var="c">
+        <c:forEach items="${carseries}" var="c">
             <tr>
-                <td>${c.carbrandid}</td>
-                <td>${c.carbrandname}</td>
-                <td><img src="Images/${c.carbrandicon}" style="height:30px;width:30px;border-radius:50%;"></td>
-                <td>${c.carbrandlogogram}</td>
+                <td>${c.carseriesid}</td>
+                <td>${c.carseriesname}</td>
+                <td>${c.car.carbrandname}</td>
                 <td class="td-manage">
-                    <a title="编辑"  onclick="x_admin_show('编辑','/carbrand/find_carbrandid?carbrandid=${c.carbrandid}')" href="javascript:;">
+                    <a title="编辑"  onclick="x_admin_show('编辑','carseries/find_carseriesid?carseriesid=${c.carseriesid}')" href="javascript:;">
                         <i class="layui-icon">&#xe642;</i>
                     </a>
                 </td>

@@ -104,6 +104,7 @@ public class userinfoController {
     @ResponseBody
     public void insert_userinfo(String userinfophone,int positionid,String userinfopassword,int userinfostate){
         int userinfoid=(int)((Math.random()*9+1)*100000);
+        System.out.println(positionid);
         int headcount=uservice.insert_userinfo(userinfoid,userinfophone,userinfopassword,positionid,userinfostate);
     }
 

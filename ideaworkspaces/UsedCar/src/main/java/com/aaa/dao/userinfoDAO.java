@@ -40,6 +40,6 @@ public interface userinfoDAO {
     /*
     * 查询所有前台用户
     * */
-    @Select("select * from userinfo where positionid=258195")
+    @Select("select * from userinfo where positionid=152147")
     public List<userinfo> find_userinfoadmin();
 }

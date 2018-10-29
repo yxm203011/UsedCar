@@ -28,4 +28,8 @@ public class carbrandService {
     public int update_carbrand(carbrand c){
         return cdao.update_carbrand(c);
     }
+
+    public carbrand sel_carbrandid(int carbrandid){
+        return cdao.sel_carbrandid(carbrandid);
+    }
 }

@@ -14,7 +14,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("login")
-public class loginCobtroller {
+public class LoginController {
 
     @Resource
     userphoneservice uservice;

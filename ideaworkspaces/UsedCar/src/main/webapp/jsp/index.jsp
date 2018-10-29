@@ -85,7 +85,7 @@
             <li>
                 <a href="javascript:;">
                     <i class="iconfont">&#xe709;</i>
-                    <cite>车辆分类管理</cite>
+                    <cite>车辆管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
@@ -93,6 +93,22 @@
                         <a _href="carbrand/find_carbrand">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>车辆品牌管理</cite>
+                        </a>
+                    </li >
+                </ul>
+                <ul class="sub-menu">
+                <li>
+                    <a _href="carseries/find_carseries">
+                        <i class="iconfont">&#xe6a7;</i>
+                        <cite>车辆车系管理</cite>
+                    </a>
+                </li >
+                </ul>
+                <ul class="sub-menu">
+                    <li>
+                        <a _href="carbirth/find_carbirth">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>车辆年款管理</cite>
                         </a>
                     </li >
                 </ul>
